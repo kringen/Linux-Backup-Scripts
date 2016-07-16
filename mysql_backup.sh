@@ -40,4 +40,4 @@ done
 rsync -aq -e "$SSHCOMMAND" $MBD $REMOTEDIR
 
 # Remove old archives older than 24 hours
-#find $MBD* -mtime +2 -exec rm {} \;
+find $MBD* -mtime +2 -exec rm {} \;
