@@ -22,7 +22,7 @@ NOW="$(date +"%m-%d-%Y-%T")"
 DBS="$(mysql -u $MyUSER -h $MyHOST -p$MyPASS -Bse 'show databases')"
 
 # Command used by rsync to use the password-less private key
-SSHCOMMAND="ssh -i /home/erik/.ssh/id_rsa"
+SSHCOMMAND="ssh -i /home/username/.ssh/id_rsa"
 
 # Remote host and directory that we will be syncing archives to.
 REMOTEDIR="remotehost:/home/username/mysql_backups"
