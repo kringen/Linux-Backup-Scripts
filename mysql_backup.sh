@@ -5,14 +5,14 @@
 ###########################################
 
 # Backup Directory
-MBD="/home/erik/Music"
+MBD="/home/username/mysql_backups"
 
 # Get hostname
 HOST="$(hostname)"
 
 # Set MySQL Username, Password, and host
-MyUSER="erik"
-MyPASS="Abby0u812"
+MyUSER="usernameGoesHere"
+MyPASS="passwordGoesHere"
 MyHOST="localhost"
 
 # Get current date for use in archive filename
@@ -25,7 +25,7 @@ DBS="$(mysql -u $MyUSER -h $MyHOST -p$MyPASS -Bse 'show databases')"
 SSHCOMMAND="ssh -i /home/erik/.ssh/id_rsa"
 
 # Remote host and directory that we will be syncing archives to.
-REMOTEDIR="garage2.mycontraption.com:/home/erik/mysql_backups"
+REMOTEDIR="remotehost:/home/username/mysql_backups"
 
 #  Loop through Databases
 for db in $DBS
